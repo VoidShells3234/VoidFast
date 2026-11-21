@@ -1,0 +1,90 @@
+# VoidFast — статический сайт. Здесь нет PHP и баз данных, поэтому ломать
+# нечего; ниже закрыты типовые дыры и служебные файлы.
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+  Header always set X-Download-Options "noopen"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'; media-src 'none'; worker-src 'none'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests"
+</IfModule>
+
+# Установщик отдаём только как файл: браузер не должен пытаться его открыть.
+<IfModule mod_mime.c>
+  AddType application/octet-stream .exe
+  <FilesMatch "\.(exe|msi|zip)$">
+    ForceType application/octet-stream
+    <IfModule mod_headers.c>
+      Header always set Content-Disposition "attachment"
+      Header always set X-Content-Type-Options "nosniff"
+    </IfModule>
+  </FilesMatch>
+</IfModule>
+
+# Только HTTPS (после подключения SSL в панели хостинга).
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Скрытые файлы (.git, .env, .htaccess) — наружу не отдаём.
+  RewriteRule (^|/)\. - [F]
+</IfModule>
+
+<IfModule mod_ssl.c>
+  <IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  </IfModule>
+</IfModule>
+
+# В папке сайта не должно быть исполняемых скриптов: даже если кто-то зальёт
+# туда php-шелл, сервер его не выполнит.
+<FilesMatch "\.(php|phtml|php[3-8]|pl|py|cgi|sh|asp|aspx|jsp|htaccess|htpasswd)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Не отдаём бэкапы, логи и прочее служебное.
+<FilesMatch "\.(bak|old|orig|log|sql|env|ini|md|py|json|ya?ml|spec|cfg|conf)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+ErrorDocument 404 /404.html
+
+# Кэш: картинки надолго, страницы — нет (чтобы обновления сразу виделись).
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType text/css "access plus 1 hours"
+  ExpiresByType application/javascript "access plus 1 hours"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Защита от «горячих» ссылок на картинки с чужих сайтов.
+# Раскомментируйте и подставьте свой домен, если понадобится.
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTP_REFERER} !^$
+#   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?ВАШ-ДОМЕН/ [NC]
+#   RewriteRule \.(png|jpg|jpeg|gif|webp|ico)$ - [R=403,L]
+# </IfModule>

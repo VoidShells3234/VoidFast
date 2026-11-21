@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'; media-src 'none'; worker-src 'none'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Статус Alpha — VoidFast</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css" integrity="sha384-ZT3u6Bsc2lttz7R9hRp/v62/ry1at806BWeXj5rqeDLu2MgXhAchaOToR/DKzfiD">
+</head>
+<body>
+<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="grid-overlay"></div>
+<div id="pointer-glow"></div>
+<div id="pointer-dot"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="VoidFast">VoidFast<span class="tag">alpha</span></a>
+    <button class="burger" aria-label="Меню"><img src="assets/icons/menu.png" alt="Меню"></button>
+    <nav class="links">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О браузере</a>
+      <a href="install.html">Установка</a>
+      <a class="active" href="alpha.html">Alpha</a>
+      <a href="terms.html">Условия</a>
+      <a class="nav-cta" href="install.html">Скачать</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="page-head">
+      <div class="reveal">
+        <span class="pill"><span class="dot"></span> Статус проекта</span>
+        <h1>Браузер в Alpha</h1>
+        <p>VoidFast пока в ранней версии. Основные функции работают, но проект ещё дорабатывается и может вести себя нестабильно.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:10px">
+      <div class="callout reveal">
+        <span class="ico"><img src="assets/icons/warning.png" alt=""></span>
+        <p><b>Что значит alpha.</b> Возможны баги, недоработки и изменения от версии к версии. Лучше не использовать VoidFast как единственный браузер для критически важных задач.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head reveal" style="margin-bottom:22px">
+        <div class="kicker">Готово</div>
+        <h2>Что уже работает</h2>
+      </div>
+      <div class="cards">
+        <div class="card reveal"><div class="ico"><img src="assets/icons/check.png" alt=""></div><h3>Обычный веб</h3><p>Открытие сайтов, вкладки, закладки, поиск, скачивания и базовая навигация.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/check.png" alt=""></div><h3>Расширения</h3><p>Установка расширений из Chrome Web Store и базовая работа части их функций.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/check.png" alt=""></div><h3>Профили и темы</h3><p>Локальные профили, встроенные темы и настройки интерфейса.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/check.png" alt=""></div><h3>Установщик</h3><p>VoidSetup.exe для установки на Windows и портативный вариант.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head reveal" style="margin-bottom:22px">
+        <div class="kicker">В работе</div>
+        <h2>Что может улучшаться</h2>
+      </div>
+      <div class="cards">
+        <div class="card reveal"><div class="ico"><img src="assets/icons/tools.png" alt=""></div><h3>Стабильность</h3><p>Исправление багов, улучшение поведения интерфейса и совместимости с сайтами.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/sliders.png" alt=""></div><h3>Настройки</h3><p>Больше удобных опций и доработка существующих настроек.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/puzzle.png" alt=""></div><h3>Расширения</h3><p>Улучшение совместимости с расширениями и их поведением в браузере.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/package.png" alt=""></div><h3>Обновления</h3><p>Более удобная доставка новых версий и исправлений.</p></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:10px"><img src="assets/icon.png" alt=""> VoidFast</a>
+        <p style="margin:0">Браузер для Windows. Проект в раннем доступе, статус alpha.</p>
+      </div>
+      <div>
+        <h4>Страницы</h4>
+        <a href="about.html">О браузере</a>
+        <a href="install.html">Установка</a>
+        <a href="alpha.html">Статус Alpha</a>
+        <a href="terms.html">Условия использования</a>
+      </div>
+      <div>
+        <h4>Ещё</h4>
+        <a href="site.html">О сайте</a>
+        <a href="/download/VoidSetup.exe">Скачать установщик</a>
+        <a href="https://icons8.ru" target="_blank" rel="noopener">Иконки: Icons8</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="year">2026</span> VoidFast. Alpha-версия.</span>
+      <span>Локальная сборка сайта</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js" integrity="sha384-KDA+P2q00Tup7ItOnVq+pJaGnTKc4FrToufL78ubHbaucLGVVwBI3oAfrbWIVBmG"></script>
+</body>
+</html>

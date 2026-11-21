@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'; media-src 'none'; worker-src 'none'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>О сайте — VoidFast</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css" integrity="sha384-ZT3u6Bsc2lttz7R9hRp/v62/ry1at806BWeXj5rqeDLu2MgXhAchaOToR/DKzfiD">
+</head>
+<body>
+<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="grid-overlay"></div>
+<div id="pointer-glow"></div>
+<div id="pointer-dot"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="VoidFast">VoidFast<span class="tag">alpha</span></a>
+    <button class="burger" aria-label="Меню"><img src="assets/icons/menu.png" alt="Меню"></button>
+    <nav class="links">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О браузере</a>
+      <a href="install.html">Установка</a>
+      <a href="alpha.html">Alpha</a>
+      <a href="terms.html">Условия</a>
+      <a class="nav-cta" href="install.html">Скачать</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="page-head">
+      <div class="reveal">
+        <span class="pill"><span class="dot"></span> О сайте</span>
+        <h1>О сайте</h1>
+        <p>Это простая статическая страница проекта VoidFast: описание браузера, статус alpha и страница установки.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:10px">
+      <div class="cards">
+        <div class="card reveal"><div class="ico"><img src="assets/icons/home.png" alt=""></div><h3>Статический сайт</h3><p>Сайт состоит из обычных HTML, CSS и JS файлов. Его можно разместить на любом статическом хостинге.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/download.png" alt=""></div><h3>Страница загрузки</h3><p>На странице установки есть кнопка скачивания установщика и базовые системные требования.</p></div>
+        <div class="card reveal"><div class="ico"><img src="assets/icons/plug.png" alt=""></div><h3>Без лишних зависимостей</h3><p>Сайт не использует внешние скрипты и шрифты — стили, картинки и JS лежат в папке <code>site</code>.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="prose reveal">
+        <h3>Локальный режим</h3>
+        <p>Сейчас сайт настроен для локального запуска. Для просмотра используйте <code>start-site.cmd</code> или <code>python site\server.py</code>.</p>
+        <h3>Подготовка к хостингу</h3>
+        <p>Структура сайта статическая, поэтому его можно выложить как обычные файлы. Перед публикацией нужно будет указать реальный домен и место, откуда будет скачиваться установщик.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:10px"><img src="assets/icon.png" alt=""> VoidFast</a>
+        <p style="margin:0">Браузер для Windows. Проект в раннем доступе, статус alpha.</p>
+      </div>
+      <div>
+        <h4>Страницы</h4>
+        <a href="about.html">О браузере</a>
+        <a href="install.html">Установка</a>
+        <a href="alpha.html">Статус Alpha</a>
+        <a href="terms.html">Условия использования</a>
+      </div>
+      <div>
+        <h4>Ещё</h4>
+        <a href="site.html">О сайте</a>
+        <a href="/download/VoidSetup.exe">Скачать установщик</a>
+        <a href="https://icons8.ru" target="_blank" rel="noopener">Иконки: Icons8</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="year">2026</span> VoidFast. Alpha-версия.</span>
+      <span>Локальная сборка сайта</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js" integrity="sha384-KDA+P2q00Tup7ItOnVq+pJaGnTKc4FrToufL78ubHbaucLGVVwBI3oAfrbWIVBmG"></script>
+</body>
+</html>

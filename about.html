@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self'; media-src 'none'; worker-src 'none'; manifest-src 'self'; require-trusted-types-for 'script'; trusted-types 'none'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>О браузере — VoidFast</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css" integrity="sha384-ZT3u6Bsc2lttz7R9hRp/v62/ry1at806BWeXj5rqeDLu2MgXhAchaOToR/DKzfiD">
+</head>
+<body>
+<div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+<div class="grid-overlay"></div>
+<div id="pointer-glow"></div>
+<div id="pointer-dot"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="VoidFast">VoidFast<span class="tag">alpha</span></a>
+    <button class="burger" aria-label="Меню"><img src="assets/icons/menu.png" alt="Меню"></button>
+    <nav class="links">
+      <a href="index.html">Главная</a>
+      <a class="active" href="about.html">О браузере</a>
+      <a href="install.html">Установка</a>
+      <a href="alpha.html">Alpha</a>
+      <a href="terms.html">Условия</a>
+      <a class="nav-cta" href="install.html">Скачать</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="page-head">
+      <div class="reveal">
+        <span class="pill"><span class="dot"></span> О проекте</span>
+        <h1>О браузере</h1>
+        <p>VoidFast — обычный браузер для Windows на базе Chromium. Он ориентирован на понятный интерфейс, привычную работу с сайтами и удобные базовые функции.</p>
+      </div>
+    </section>
+
+    <section style="padding-top:10px">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:34px">
+        <table class="spec reveal">
+          <tr><th>Блок</th><th>Что есть</th></tr>
+          <tr><td>Движок</td><td><b>Chromium</b> (Qt WebEngine / PySide6)</td></tr>
+          <tr><td>Интерфейс</td><td>Стеклянные панели, аккуратные анимации, <b>7 встроенных тем</b></td></tr>
+          <tr><td>Расширения</td><td>Поддержка расширений из <b>Chrome Web Store</b></td></tr>
+          <tr><td>Поиск</td><td><b>Google</b> по умолчанию, можно выбрать другой поисковик</td></tr>
+          <tr><td>Профили</td><td>Локальные профили на одном компьютере</td></tr>
+          <tr><td>Вкладки</td><td>Обычные вкладки, закладки, история, скачивания</td></tr>
+        </table>
+
+        <div class="reveal">
+          <div class="section-head" style="margin-bottom:20px">
+            <div class="kicker">Что умеет</div>
+            <h2>Основные возможности</h2>
+          </div>
+          <div class="cards">
+            <div class="card reveal"><div class="ico"><img src="assets/icons/tabs.png" alt=""></div><h3>Вкладки и закладки</h3><p>Привычная навигация: вкладки, закладки, история, адресная строка, скачивания.</p></div>
+            <div class="card reveal"><div class="ico"><img src="assets/icons/user.png" alt=""></div><h3>Профили</h3><p>Несколько локальных профилей на одном ПК, переключение и управление без облака.</p></div>
+            <div class="card reveal"><div class="ico"><img src="assets/icons/puzzle.png" alt=""></div><h3>Расширения</h3><p>Установка расширений из галереи, по ссылке/ID или из локального файла.</p></div>
+            <div class="card reveal"><div class="ico"><img src="assets/icons/palette.png" alt=""></div><h3>Темы</h3><p>Встроенные темы и возможность подключать свои оформления.</p></div>
+            <div class="card reveal"><div class="ico"><img src="assets/icons/moon.png" alt=""></div><h3>Спящие вкладки</h3><p>Неактивные вкладки могут засыпать, чтобы меньше нагружать компьютер.</p></div>
+            <div class="card reveal"><div class="ico"><img src="assets/icons/keyboard.png" alt=""></div><h3>Горячие клавиши</h3><p>Стандартные сочетания вроде Ctrl+T, Ctrl+W, Ctrl+L, Ctrl+, и другие.</p></div>
+          </div>
+        </div>
+
+        <div class="callout reveal">
+          <span class="ico"><img src="assets/icons/idea.png" alt=""></span>
+          <p><b>Простой подход.</b> VoidFast не пытается быть чем-то сложным — это обычный браузер с понятным интерфейсом и базовыми удобствами.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="download-box reveal">
+        <div>
+          <h3>Хочешь посмотреть?</h3>
+          <p>Скачай установщик и попробуй alpha-версию на своём Windows-компьютере.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="alpha.html">Статус alpha</a>
+          <a class="btn btn-primary" href="install.html">Установка</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:10px"><img src="assets/icon.png" alt=""> VoidFast</a>
+        <p style="margin:0">Браузер для Windows. Проект в раннем доступе, статус alpha.</p>
+      </div>
+      <div>
+        <h4>Страницы</h4>
+        <a href="about.html">О браузере</a>
+        <a href="install.html">Установка</a>
+        <a href="alpha.html">Статус Alpha</a>
+        <a href="terms.html">Условия использования</a>
+      </div>
+      <div>
+        <h4>Ещё</h4>
+        <a href="site.html">О сайте</a>
+        <a href="/download/VoidSetup.exe">Скачать установщик</a>
+        <a href="https://icons8.ru" target="_blank" rel="noopener">Иконки: Icons8</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="year">2026</span> VoidFast. Alpha-версия.</span>
+      <span>Локальная сборка сайта</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js" integrity="sha384-KDA+P2q00Tup7ItOnVq+pJaGnTKc4FrToufL78ubHbaucLGVVwBI3oAfrbWIVBmG"></script>
+</body>
+</html>
