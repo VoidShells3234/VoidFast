@@ -88,3 +88,12 @@ ErrorDocument 404 /404.html
 #   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?ВАШ-ДОМЕН/ [NC]
 #   RewriteRule \.(png|jpg|jpeg|gif|webp|ico)$ - [R=403,L]
 # </IfModule>
+
+# ---------------------------------------------------------------------------
+# Дополнительно (включите, когда сайт уже открывается по своему адресу):
+# чужой домен, направленный на этот хостинг, получит 403 вместо копии сайта.
+#<IfModule mod_rewrite.c>
+#  RewriteEngine On
+#  RewriteCond %{HTTP_HOST} !^(www\.)?voidshells3234\.github\.io/VoidFast$ [NC]
+#  RewriteRule ^ - [F]
+#</IfModule>

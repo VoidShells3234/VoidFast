@@ -71,10 +71,11 @@ VOIDFAST — САЙТ ДЛЯ ХОСТИНГА
 скачал именно наш установщик. Если пересобираете VoidSetup.exe — заново
 запустите build_hosting.py, чтобы хеш на сайте обновился.
 Если хостинг не принимает такие большие файлы или не даёт столько места:
-  * загрузите установщик на Яндекс Диск, Google Drive или в Cloudflare R2;
+  * загрузите установщик на Яндекс Диск, Google Drive, в Cloudflare R2 или
+    в GitHub Releases;
   * получите прямую ссылку на скачивание;
-  * замените в HTML все href="/download/VoidSetup.exe" на эту ссылку
-    (файлов index.html и install.html достаточно, но лучше во всех страницах);
+  * пересоберите сайт с этой ссылкой:
+    python tools\build_hosting.py --download-url "https://.../VoidSetup.exe"
   * хеш SHA-256 из install.html оставьте — он остаётся верным.
 
 Согласие пользователя (terms.html)
